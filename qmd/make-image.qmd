@@ -13,11 +13,14 @@ Make image:
 ```{r}
 #| label: make-image
 
+set.seed(330)
+
 n <- 100
 x <- rnorm(n, 0, 1)
 y <- rnorm(n, 0, 1)
+df <- data.frame(x, y)
 
-plot(x, y)
+plot(y ~ x, df)
 
 p <- recordPlot()
 ```
@@ -30,4 +33,10 @@ Save image:
 png("images/img.png")
 p
 dev.off()
+```
+
+Save data:
+
+```{r}
+write.csv(df, "data/df.csv", row.names = FALSE)
 ```

@@ -18,8 +18,20 @@ The image cannot be fetched during render:
 knitr::include_graphics("images/img.png")
 ```
 
-Markdown syntax can work but requires relative path from document (ignores project working directory):
+Markdown syntax can work but requires relative path from document.
+
+Path from project root fails:
 
 ![](images/img.png)
 
+Relative path from document works:
+
 ![](../images/img.png)
+
+But data can be loaded with path from project root:
+
+```{r}
+df <- read.csv("data/df.csv")
+head(df)
+```
+

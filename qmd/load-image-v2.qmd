@@ -19,6 +19,19 @@ file.copy("images", "qmd", recursive = TRUE)
 knitr::include_graphics("images/img.png")
 ```
 
+Markdown syntax:
+
+Path from project root now works:
+
 ![](images/img.png)
 
+Relative path from document works:
+
 ![](../images/img.png)
+
+Data can be loaded with path from project root:
+
+```{r}
+df <- read.csv("data/df.csv")
+head(df)
+```
