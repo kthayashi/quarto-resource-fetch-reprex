@@ -17,3 +17,9 @@ The image cannot be fetched during render:
 
 knitr::include_graphics("images/img.png")
 ```
+
+Markdown syntax can work but requires relative path from document (ignores project working directory):
+
+![](images/img.png)
+
+![](../images/img.png)

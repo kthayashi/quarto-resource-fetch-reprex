@@ -18,3 +18,7 @@ Copying the directory containing the image from the project root to the director
 file.copy("images", "qmd", recursive = TRUE)
 knitr::include_graphics("images/img.png")
 ```
+
+![](images/img.png)
+
+![](../images/img.png)
