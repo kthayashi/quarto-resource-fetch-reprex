@@ -1,0 +1,20 @@
+---
+title: Load image (v2)
+---
+
+```{r}
+#| label: check
+
+getwd()
+
+file.exists("images/img.png")
+```
+
+Copying the directory containing the image from the project root to the directory containing the render targets is necessary to make the image available during render, despite setting `execute-dir: project`:
+
+```{r}
+#| label: load-image
+
+file.copy("images", "qmd", recursive = TRUE)
+knitr::include_graphics("images/img.png")
+```

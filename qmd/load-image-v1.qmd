@@ -1,0 +1,19 @@
+---
+title: Load image (v1)
+---
+
+```{r}
+#| label: check
+
+getwd()
+
+file.exists("images/img.png")
+```
+
+The image cannot be fetched during render:
+
+```{r}
+#| label: load-image
+
+knitr::include_graphics("images/img.png")
+```

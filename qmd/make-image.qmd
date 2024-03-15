@@ -1,0 +1,33 @@
+---
+title: Make image
+---
+
+```{r}
+#| label: check
+
+getwd()
+```
+
+Make image:
+
+```{r}
+#| label: make-image
+
+n <- 100
+x <- rnorm(n, 0, 1)
+y <- rnorm(n, 0, 1)
+
+plot(x, y)
+
+p <- recordPlot()
+```
+
+Save image:
+
+```{r}
+#| label: save-image
+
+png("images/img.png")
+p
+dev.off()
+```

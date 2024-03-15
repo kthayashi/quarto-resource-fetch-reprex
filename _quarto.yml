@@ -1,0 +1,14 @@
+project: 
+  type: default
+  execute-dir: project # Setting to file causes render to fail completely
+  render:
+    - qmd/make-image.qmd
+    - qmd/load-image-v1.qmd
+    - qmd/load-image-v2.qmd
+  post-render: postrender.R
+
+# Specify format with embedded resources
+# Could also be pdf or docx
+format:
+  html:
+    embed-resources: true
